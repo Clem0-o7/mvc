@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Edit Traffic Light</h2>
+    <form method="post">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" value="{{ light[1] }}" required>
+        <br>
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" value="{{ light[2] }}" required>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to List</a>
+{% endblock %}
